@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void) {
+ float dinheiro, preço_almoço, preço_sobremesa;
+ dinheiro = 40.0;
+ preço_almoço = 20.0;
+ preço_sobremesa = 16;
+ //sai para almoçar
+ dinheiro = dinheiro - preço_almoço;
+ if (dinheiro >= preço_sobremesa){printf("hoje tem Sobremesa!\n");
+ dinheiro = dinheiro - preço_sobremesa;}
+ printf("Voltando para O Trabalho\n");
+ printf("sobrou: R$%f \t", dinheiro);
+
+return 0;
+
+}
