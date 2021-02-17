@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(void) {
+  //*variavel para armazenar numeros inteiros int altura;
+//atribuiçao- é uma ordem para colocar algo dentro de uma variavel*//
+ int altura = 184;
+ //exibiçao do valor da variavel
+  printf("o valor Da Minha Altura é: %i cm\n\n", altura);
+  //variavel para armazenar Um Numero Real
+  float peso;// numero real de 32 bits
+  double imc;// numero real de 64 bits
+  peso = 105.47;
+  //ajuste da unidade de altura
+  float altura_metros;
+  //altura_metros= altura / 100.0;
+  int fator_de_conversao = 100;
+  altura_metros= altura /100.0;
+  altura_metros = (float)altura / fator_de_conversao;
+  imc = peso / (altura_metros * altura_metros);
+  printf("valor do IMC para altura %i e peso %f: %lf\n", altura, peso, imc);
+
+  return 0;
+}
