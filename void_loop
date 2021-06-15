@@ -1,0 +1,14 @@
+void loop() {
+//programaprincipal - vai ficar sendo executado enquanto o microcontrolador e wait for wifi conection
+ if ((WifiMulti.run() == WL_CONECTED)  {
+ //VARIAVEIS PARA LIDAR COM A REQUISEIÇAO http e com o cliente via wifi
+ 
+ const char* site = "http//192.168.1.65:1880/ola";
+ tratarrequisicaoGetHttp(site);
+ delay(1000);
+ tratarRequisicaogethttp("http//192.168.1.65:1880/ola-nome?nome=Gabriel");
+ }
+ 
+ delay(10000);
+ 
+ }
