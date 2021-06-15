@@ -1,0 +1,12 @@
+void loop
+//programa principal - vai ficar sendo executado enquantoo microcontrolador
+wait for wifi conetion
+
+if ((WifiMulti.run() == WL_CONNECTED))  {
+// variaveis para lidar com a requisicao http e com o cliente wifi
+
+const char* site = "http:viacep.com.br/ws/01001000/json/";
+tratarRequisicaoGetHttp(site);
+}
+delay(10000);
+}
