@@ -1,0 +1,35 @@
+void setup(){
+  inicializacomunicacaoWifi();
+  }
+  
+  tratarrequisicaoGetHttp(const char* Site_para_realizar_requisicao){
+     WifiClient  Client;
+     HttpClient   Http;
+     
+     if(http.begin(client, Site_para_realizar_requisicao)) {
+     
+     int httpCode = http.GET()
+     if(httpCode > 0) {
+     //entra no if se deu bom!
+     if (httpcode == HTTP CODE OK || HttpCode == HTTP_CODE_MOVED_PERMAMENTLY){
+     
+     String payload = http.getString();
+     //opicional para depuração
+     Serial.println(payload);
+     }
+     }
+     else{
+     //a requisição não deu certo!
+     //opcional - para depuração
+     
+     Serial.printf("[HTTP] GET...failed, error: %s/n", http.errorToString()httpcode.c_str());
+     }
+     http.end();
+     }
+     else{
+     //opcional - para depuração
+     Serial.printf("[HTTP] Unable To connect\n");
+     
+     }
+     
+     
