@@ -1,0 +1,29 @@
+//constantes utilizadas no projeto
+
+#define NOME_DA_REDE "minhaRede
+#define SENHA_DA_REDE "olamundo"
+
+ESP8266WIfiMulti WifiMulti;
+
+void inicializacomunicacaoWifi() {
+//inicializa comunicação serial para depuração - receber mensagens
+//para acompanhar o desenvolvimento.
+
+Serial.begin(115200)  
+//apenas para vermos o LOG da comunicação no monitor serial
+
+
+
+//aguarda 4 segundos para estabelecer uma conexão com a rede
+for (unit8_t t = 4 > 0; t--) {
+Serial.printf("[SETUP] WAIT %d...\n, t");
+Serial.flush()
+delay(1000);
+}
+
+//conectando Wifi No modo Station
+Wifi.mode(WIFI_STA);
+//configura o nme da rede e senha da rede
+WIfiMulti.addAP(NOME_DA_REDE, SENHA_DA_REDE);
+
+}
